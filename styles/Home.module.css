@@ -1,0 +1,63 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/images/hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* position logo top-left */
+.logo {
+  position: absolute;
+  top: 15%;       /* 20% down from the top of the hero */
+  left: 15%;      /* 20% in from the left edge */
+  width: 300px;   /* adjust size if needed */
+  height: auto;
+  pointer-events: none;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+  .logo {
+    top: 6%;             /* adjust how far down on mobile */
+    left: 50%;            /* center horizontally */
+    transform: translateX(-50%);
+    width: 300px;         /* adjust mobile size */
+  }
+}
+
+.bottomContainer {
+  position: absolute;
+  bottom: 15%;             /* 20% up from the bottom */
+  left: 50%;               /* center horizontally */
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* the two-line bold text */
+.bottomText {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  white-space: pre-line;   /* honors line breaks */
+}
+
+/* the Learn More button */
+.learnMoreButton {
+  margin-top: 16px;
+  padding: 12px 32px;      /* more vertical and horizontal padding */
+  background: transparent;
+  color: white;
+  border: 3px solid white; /* slightly thicker border */
+  border-radius: 1px;      /* a bit more rounding */
+  font-weight: 700;
+  font-size: 1.125rem;     /* larger text */
+  text-transform: uppercase;
+  cursor: pointer;
+}
