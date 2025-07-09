@@ -48,6 +48,13 @@
   white-space: pre-line;   /* honors line breaks */
 }
 
+/* mobile override */
+@media (max-width: 768px) {
+  .bottomText {
+    white-space: pre;      /* only break where you put '\n' */
+  }
+}
+
 /* the Learn More button */
 .learnMoreButton {
   margin-top: 16px;
