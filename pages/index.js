@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css';
+import whyStyles from '../styles/WhyChoose.module.css';
 
 export default function Home() {
   return (
@@ -19,5 +20,7 @@ export default function Home() {
         </button>
       </div>
     </section>
+
+    
   );
 }

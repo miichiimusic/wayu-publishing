@@ -31,12 +31,12 @@
 
 .bottomContainer {
   position: absolute;
-  bottom: 15%;             /* 20% up from the bottom */
-  left: 50%;               /* center horizontally */
-  transform: translateX(-50%);
+  bottom: 15%;         /* same as before */
+  left: 0;              /* start at the left edge */
+  width: 100%;          /* now spans the full hero width */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  /* centers children horizontally */
 }
 
 /* the two-line bold text */
@@ -46,13 +46,6 @@
   font-size: 1.5rem;
   text-align: center;
   white-space: pre-line;   /* honors line breaks */
-}
-
-/* mobile override */
-@media (max-width: 768px) {
-  .bottomText {
-    white-space: pre;      /* only break where you put '\n' */
-  }
 }
 
 /* the Learn More button */

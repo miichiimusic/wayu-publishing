@@ -1,0 +1,53 @@
+/* styles/WhyChoose.module.css */
+
+.whySection {
+  background: #fafafa;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #111;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.icon {
+  width: 40px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  color: #222;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
