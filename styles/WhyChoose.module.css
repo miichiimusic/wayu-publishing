@@ -1,78 +1,84 @@
 /* styles/WhyChoose.module.css */
 
-/* Container for the whole section */
+/* Full-width grey background section */
 .whySection {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 1rem;
-  gap: 2rem;
-  /* allow wrapping only on mobile */
-  flex-wrap: nowrap;
-}
-
-/* Left column (text + button) */
-.left {
-  flex: 1 1 50%;
-  max-width: 50%;
-}
-
-/* Right column (image) */
-.right {
-  flex: 1 1 50%;
-  max-width: 50%;
+  background-color: #f7f7f7;
+  padding: 4rem 1rem;
   text-align: center;
 }
 
-/* Heading */
-.title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #111;
+/* Main heading */
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: #000000;
+  text-transform: uppercase;
 }
 
-/* Paragraph */
-.text {
+/* Subtitle under the heading */
+.sectionSubtitle {
   font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  color: #444;
+  line-height: 1.5;
+  color: #5a5a5a;
+  margin: 0 auto 5rem;
+  max-width: 600px;
 }
 
-/* Button */
-.button {
-  display: inline-block;
-  padding: 12px 40px;
-  background-color: #000000;   /* your brand color */
-  color: #fff;
-  border: none;
-  border-radius: 0px;
-  font-weight: 700;
-  cursor: pointer;
+/* Centered grid wrapper with max width */
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
 }
 
-/* Image styles */
-.right img {
-  width: 100%;
-  height: auto;
+/* Feature card styling with max width */
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-/* MOBILE: stack columns */
-@media (max-width: 768px) {
-  .whySection {
-    flex-direction: column;
-    text-align: initial;
-    flex-wrap: wrap;
+/* Icon styling */
+.icon {
+  display: block;
+  width: 40px;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+/* Feature title */
+.featureTitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+/* Feature description */
+.featureText {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #5a5a5a;
+}
+
+/* Mid-breakpoint: 2 columns (2×2) */
+@media (max-width: 1024px) {
+  .whyGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .left, .right {
-    max-width: 100%;
-    flex: none;
-  }
-  .left {
-    margin-bottom: 2rem;
-    text-align: left;
+}
+
+/* Mobile: 1 column (stacked) */
+@media (max-width: 600px) {
+  .whyGrid {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,0 +1,26 @@
+/* styles/DidYouKnow.module.css */
+
+/* Section wrapper with soft gradient */
+.didSection {
+  background: #ffffff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+/* Uppercase heading */
+.didTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #111;
+  text-transform: uppercase;
+}
+
+/* Body text, constrained width */
+.didText {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
