@@ -2,7 +2,7 @@
 
 /* Full-width section with white background */
 .compSection {
-  background-color: #ffffff;
+  background-color: #090909;
   padding: 4rem 1rem;
   text-align: center;
 }
@@ -10,14 +10,14 @@
 /* Small pill label */
 .pill {
   display: inline-block;
-  padding: 4px 12px;
-  background-color: #d4edda;
-  color: #155724;
+  padding: 6px 15px;
+  background-color: rgb(89, 0, 255);
+  color: #ffffff;
   border-radius: 9999px;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
 }
 
 /* Main title */
@@ -25,15 +25,15 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #000000;
+  color: #ffffff;
 }
 
 /* Subtitle text */
 .compSubtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
-  color: #5a5a5a;
-  margin: 0 auto 2.5rem;
+  color: #bcbcbc;
+  margin: 0 auto 4rem;
   max-width: 600px;
 }
 
@@ -59,25 +59,36 @@
 
 /* Icon */
 .icon {
+  display: block;
   width: 40px;
   margin-bottom: 1rem;
-  display: block;
-  color: #000000;
+
+  /* point the SVG stroke at your gradient */
+  stroke: url(#icon-gradient);
+  /* if the icon uses fill instead of stroke: */
+  /* fill: url(#icon-gradient); */
 }
+
+/* ensure every path inside the SVG inherits */
+.icon * {
+  stroke: inherit !important;
+  fill: inherit !important;
+}
+
 
 /* Feature title */
 .featureTitle {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin: 0 0 1.5rem;
-  color: #000000;
+  margin: 0 0 1rem;
+  color: #ffffff;
 }
 
 /* Feature description */
 .featureText {
   font-size: 1rem;
   line-height: 1.5;
-  color: #5a5a5a;
+  color: #bcbcbc;
   margin: 0;
 }
 

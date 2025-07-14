@@ -10,14 +10,14 @@
 /* Pill label */
 .pill {
   display: inline-block;
-  padding: 4px 12px;
-  background-color: #e0f2fe; /* light blue */
-  color: #0369a1; /* dark blue */
+  padding: 6px 15px;
+  background-color: #b7e2ff; /* light blue */
+  color: #00476d; /* dark blue */
   border-radius: 9999px;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
 }
 
 /* Main title */
@@ -30,7 +30,7 @@
 
 /* Subtitle text */
 .soundSubtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   color: #5a5a5a;
   margin: 0 auto 2.5rem;
@@ -67,7 +67,7 @@
 
 /* Feature title */
 .featureTitle {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin: 0 0 1.5rem;
   color: #000;
@@ -75,7 +75,7 @@
 
 /* Feature description */
 .featureText {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: #5a5a5a;
   margin: 0;

@@ -1,7 +1,7 @@
 // pages/index.js
 import styles from '../styles/Home.module.css'
 import whyStyles from '../styles/WhyChoose.module.css'
-import { Globe, TrendingUp, Users, Zap, Headphones, Volume2, Video, Play, Disc } from 'lucide-react'
+import { Globe, TrendingUp, Users, Zap, Headphones, Volume2, Video, Play, Disc, ChevronDown } from 'lucide-react'
 import didStyles from '../styles/DidYouKnow.module.css'
 import compStyles from '../styles/CompositionRevenue.module.css'
 import soundStyles from '../styles/SoundRecordingRevenue.module.css'
@@ -104,6 +104,7 @@ export default function Home() {
           Every song you create has two distinct revenue streams that can earn you money simultaneously.
           The Song (Composition Revenue) and the Master Recording (Sound Recording Revenue).
         </p>
+        <ChevronDown size={32} className={didStyles.downArrow} />
       </section>
 
       {/* Composition Revenue Section */}
@@ -183,42 +184,41 @@ export default function Home() {
 </section>
 
       {/* Calculator Section */}
-      <section className={calcStyles.calcSection}>
-        <h2 className={calcStyles.calcTitle}>
-          Mechanical Royalty Calculator
-        </h2>
+<section className={calcStyles.calcSection}>
+  <div className={calcStyles.calcCard}>
+    {/* Title is now inside the card */}
+    <h2 className={calcStyles.calcTitle}>
+      Mechanical Royalty Calculator
+    </h2>
 
-        <div className={calcStyles.calcForm}>
-          <div className={calcStyles.calcRow}>
-            <input
-              type="number"
-              placeholder="Current total streams"
-              value={totalStreams}
-              onChange={e => setTotalStreams(e.target.value)}
-            />
-            <span className="result">{fmt(totalEarnings)}</span>
-          </div>
+    <div className={calcStyles.calcForm}>
+      <div className={calcStyles.calcRow}>
+        <input
+          type="number"
+          placeholder="Current total streams"
+          value={totalStreams}
+          onChange={e => setTotalStreams(e.target.value)}
+        />
+        <span className="result">{fmt(totalEarnings)}</span>
+      </div>
 
-          <div className={calcStyles.calcRow}>
-            <input
-              type="number"
-              placeholder="Monthly streams"
-              value={monthlyStreams}
-              onChange={e => setMonthlyStreams(e.target.value)}
-            />
-            <span className="result">{fmt(monthlyEarnings)}/mo</span>
-          </div>
-        </div>
-
-        <div className={calcStyles.calcDisclaimerTitle}>
-          Estimates based on average streaming royalty rates across all platforms
-        </div>
-        <p className={calcStyles.calcDisclaimerText}>
-          These calculations show potential earnings from streaming platforms.
-          Actual payouts vary by platform, country, and your distribution deal.
-          Publishing and performance royalties are additional income streams.
-        </p>
-      </section>
+      <div className={calcStyles.calcRow}>
+        <input
+          type="number"
+          placeholder="Monthly streams"
+          value={monthlyStreams}
+          onChange={e => setMonthlyStreams(e.target.value)}
+        />
+        <span className="result">{fmt(monthlyEarnings)}/mo</span>
+      </div>
+    </div>
+    <p className={calcStyles.calcDisclaimerText}>
+      These calculations show potential earnings from streaming platforms.
+      Actual payouts vary by platform, country, and your distribution deal.
+      Publishing and performance royalties are additional income streams.
+    </p>
+  </div>
+</section>
     </>
   )
 }
