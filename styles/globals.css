@@ -5,4 +5,18 @@ html, body {
   font-family: 'Inter', sans-serif;
 }
 
+/* 1. Make all elements use the border-box model */
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* 2. Prevent any horizontal overflow */
+body {
+  margin: 0;           /* ensure no default margins */
+  overflow-x: hidden;  /* hide accidental scrollbars */
+}
+
 /* (You can remove any @font-face rules for Geist Sans now) */

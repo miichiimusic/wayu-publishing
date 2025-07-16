@@ -1,0 +1,125 @@
+/* Fixed‐width container for centered content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Shared prefix bar + label */
+.prefix {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #555;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.prefix span {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: #000;
+  margin-right: 0.75rem;
+}
+
+/* Full‐bleed section backgrounds */
+.storySection {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(198, 226, 255, 0.9) 0%,   /* very light periwinkle */
+    rgba(255, 249, 243, 0.9) 100%  /* very light peach */
+  );
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+.mvSection {
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 4rem 0;
+}
+.valuesSection {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+
+/* Our Story */
+.storyTitle {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0 0 1.5rem;
+  color: #000;
+}
+.storyContent p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Mission & Vision grid */
+.mvGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+.mvItem {
+  text-align: left;
+}
+.icon {
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+.mvPrefix {
+  font-size: 0.875rem;
+  color: #555;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.mvTitle {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+.mvText {
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Values in Action */
+.valuesTitle {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0 0 2rem;
+}
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.valueItem {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: left;
+}
+.valueTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.valueText {
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  .mvGrid,
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+}

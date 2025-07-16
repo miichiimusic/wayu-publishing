@@ -20,9 +20,9 @@ export default function App({ Component, pageProps }) {
 
         {/* Load Inter (400 & 700); swap ensures text remains visible during load */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
 
       </Head>
       {/* sticky nav */}

@@ -54,10 +54,27 @@
   padding: 12px 32px;      /* more vertical and horizontal padding */
   background: transparent;
   color: white;
-  border: 3px solid white; /* slightly thicker border */
+  border: none;
   border-radius: 1px;      /* a bit more rounding */
   font-weight: 700;
   font-size: 1.125rem;     /* larger text */
   text-transform: uppercase;
   cursor: pointer;
+}
+
+/* scroll‐cue arrow under the hero button */
+.scrollArrow {
+  display: block;
+  margin: 0rem auto 0;
+  width: 40px;
+  height: auto;
+  stroke: #fff;             /* white arrow; change as needed */
+  animation: scrollLoop 1s infinite ease-in-out;
+}
+
+/* keyframes for a gentle “bounce” */
+@keyframes scrollLoop {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(10px); }
+  100% { transform: translateY(0); }
 }

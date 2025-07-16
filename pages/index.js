@@ -52,6 +52,8 @@ export default function Home() {
           <button className={styles.learnMoreButton}>
             LEARN MORE
           </button>
+          {/* animated scroll cue */}
+  <ChevronDown size={24} className={styles.scrollArrow} />
         </div>
       </section>
       

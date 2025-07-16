@@ -51,12 +51,12 @@
 
 /* CTA button */
 .cta {
-  background: #000;
+  background: #0800ff;
   color: #fff;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: 100px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Hamburger icon: hidden on desktop */
@@ -73,6 +73,9 @@
   .hamburger {
     display: block;
   }
+  .cta {
+   display: none;
+  }
 }
 
 /* MOBILE LAYOUT: hamburger | logo | CTA */
@@ -86,7 +89,6 @@
   .hamburger {
     display: block;
     order: 1;
-    margin-right: 1rem;
   }
 
   /* logo second */
