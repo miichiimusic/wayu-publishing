@@ -1,5 +1,8 @@
 /* components/Nav.module.css */
 
+/* ───────────────────────────────────────────────
+   Sticky nav: slide down on .visible
+─────────────────────────────────────────────── */
 .nav {
   position: fixed;
   top: -80px;
@@ -15,6 +18,9 @@
   top: 0;
 }
 
+/* ───────────────────────────────────────────────
+   Inner wrapper
+─────────────────────────────────────────────── */
 .inner {
   max-width: 1400px;
   margin: 0 auto;
@@ -23,11 +29,17 @@
   align-items: center;
 }
 
+/* ───────────────────────────────────────────────
+   Logo
+─────────────────────────────────────────────── */
 .logo {
   height: 15px;
   cursor: pointer;
 }
 
+/* ───────────────────────────────────────────────
+   Menu container (links, CTA, hamburger)
+─────────────────────────────────────────────── */
 .menu {
   margin-left: auto;
   display: flex;
@@ -35,7 +47,9 @@
   gap: 1rem;
 }
 
-/* Desktop nav links */
+/* ───────────────────────────────────────────────
+   Desktop nav links
+─────────────────────────────────────────────── */
 .links {
   list-style: none;
   display: flex;
@@ -49,58 +63,98 @@
   font-weight: 500;
 }
 
-/* CTA button */
+/* ───────────────────────────────────────────────
+   Call-to-action button
+─────────────────────────────────────────────── */
 .cta {
   background: #0800ff;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 100px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-/* Hamburger icon: hidden on desktop */
+/* ───────────────────────────────────────────────
+   Hamburger (hidden on desktop)
+─────────────────────────────────────────────── */
 .hamburger {
   display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
-/* MOBILE: hide links, show hamburger */
+/* ───────────────────────────────────────────────
+   Mobile overrides (<768px)
+─────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .links {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-  }
+  /* hide desktop links and CTA */
+  .links,
   .cta {
-   display: none;
-  }
-}
-
-/* MOBILE LAYOUT: hamburger | logo | CTA */
-@media (max-width: 768px) {
-  /* hide desktop links */
-  .links {
     display: none;
   }
 
-  /* show hamburger, order it first */
+  /* show hamburger, reorder within .menu */
   .hamburger {
     display: block;
     order: 1;
   }
 
-  /* logo second */
+  /* center logo */
   .logo {
     order: 2;
   }
 
-  /* menu wrapper (contains only CTA now) goes last and is pushed right */
+  /* push .menu contents to right edge */
   .menu {
     order: 3;
     margin-left: auto;
-    display: flex;
-    align-items: center;
   }
+}
+
+/* ───────────────────────────────────────────────
+   Full-screen mobile menu overlay
+─────────────────────────────────────────────── */
+.mobileOverlay {
+  position: fixed;
+  top: 50px;     /* adjust if your nav height differs */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 2rem;
+}
+.open {
+  display: flex;
+}
+
+/* ───────────────────────────────────────────────
+   Mobile menu links (centered, large)
+─────────────────────────────────────────────── */
+.mobileLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.mobileLinks li {
+  margin: 1.5rem 0;
+}
+.mobileLinks a {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #111;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  text-transform: uppercase;
+}
+.mobileLinks a:hover {
+  color: #6a11cb;
 }

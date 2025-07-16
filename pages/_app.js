@@ -18,17 +18,17 @@ export default function App({ Component, pageProps }) {
           crossOrigin="true"
         />
 
-        {/* Load Inter (400 & 700); swap ensures text remains visible during load */}
+        {/* Load Inter (400, 500, 600 & 700); swap ensures text remains visible during load */}
         <link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-  rel="stylesheet"
-/>
-
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
+
       {/* sticky nav */}
       <Nav />
-      
-     {/* SVG gradient definition for icon strokes/fills */}
+
+      {/* SVG gradient definition for icon strokes/fills */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         style={{ position: 'absolute', width: 0, height: 0 }}
@@ -42,6 +42,7 @@ export default function App({ Component, pageProps }) {
         </defs>
       </svg>
 
+      {/* page content */}
       <Component {...pageProps} />
     </>
   )
