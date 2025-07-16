@@ -1,80 +1,86 @@
+/* Full‐screen hero background */
 .hero {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('/images/hero.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: url('/images/hero.jpg') center/cover no-repeat;
   overflow: hidden;
 }
 
-/* position logo top-left */
-.logo {
-  position: absolute;
-  top: 15%;       /* 20% down from the top of the hero */
-  left: 15%;      /* 20% in from the left edge */
-  width: 300px;   /* adjust size if needed */
-  height: auto;
-  pointer-events: none;
+/* new: container matching your nav's inner width & padding */
+.heroInner {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;   /* same as your nav .inner max-width */
+  margin: 0 auto;
+  padding: 0 1rem;     /* same side gutters as nav */
+  height: 100%;
 }
 
-/* Mobile override */
+/* logo now pinned to left edge of .heroInner on desktop */
+.logo {
+  position: absolute;
+  top: 15%;            /* adjust vertical position */
+  left: 0;             /* align with nav logo */
+  transform: none;     /* remove centering */
+  width: 300px;        /* whatever size you prefer */
+  height: auto;
+  pointer-events: none;
+  padding: 0.5rem 1rem;
+}
+
+/* on mobile, revert to centered under nav logo */
 @media (max-width: 768px) {
   .logo {
-    top: 6%;             /* adjust how far down on mobile */
-    left: 50%;            /* center horizontally */
+    left: 50%;
     transform: translateX(-50%);
-    width: 300px;         /* adjust mobile size */
+    top: 6%;           /* as before */
+    width: 300px;
   }
 }
 
+/* bottom container & text/button remain the same */
 .bottomContainer {
   position: absolute;
-  bottom: 15%;         /* same as before */
-  left: 0;              /* start at the left edge */
-  width: 100%;          /* now spans the full hero width */
+  bottom: 15%;
+  left: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;  /* centers children horizontally */
+  align-items: center;
 }
 
-/* the two-line bold text */
 .bottomText {
   color: white;
   font-weight: 700;
   font-size: 1.5rem;
   text-align: center;
-  white-space: pre-line;   /* honors line breaks */
+  white-space: pre-line;
 }
 
-/* the Learn More button */
 .learnMoreButton {
   margin-top: 16px;
-  padding: 12px 32px;      /* more vertical and horizontal padding */
+  padding: 12px 32px;
   background: transparent;
   color: white;
   border: none;
-  border-radius: 1px;      /* a bit more rounding */
+  border-radius: 1px;
   font-weight: 700;
-  font-size: 1.125rem;     /* larger text */
+  font-size: 1.125rem;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-/* scroll‐cue arrow under the hero button */
+/* scroll‐cue arrow */
 .scrollArrow {
   display: block;
-  margin: 0rem auto 0;
+  margin: 1.5rem auto 0;
   width: 40px;
-  height: auto;
-  stroke: #fff;             /* white arrow; change as needed */
-  animation: scrollLoop 1s infinite ease-in-out;
+  stroke: #fff;
+  animation: scrollLoop 1.5s infinite ease-in-out;
 }
 
-/* keyframes for a gentle “bounce” */
 @keyframes scrollLoop {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(10px); }
-  100% { transform: translateY(0); }
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(10px); }
 }

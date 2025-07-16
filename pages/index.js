@@ -38,7 +38,9 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className={styles.hero}>
+     <div className={styles.heroInner}>
         <img
+          id="heroLogo"
           src="/images/logo.svg"
           alt="WAYU Publishing logo"
           className={styles.logo}
@@ -52,10 +54,10 @@ export default function Home() {
           <button className={styles.learnMoreButton}>
             LEARN MORE
           </button>
-          {/* animated scroll cue */}
-  <ChevronDown size={24} className={styles.scrollArrow} />
+          <ChevronDown size={24} className={styles.scrollArrow} />
         </div>
-      </section>
+     </div>
+    </section>
       
       {/* Why Choose Us Section */}
       <section className={whyStyles.whySection}>
