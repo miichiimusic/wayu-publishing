@@ -84,6 +84,8 @@
   border: none;
   padding: 0.5rem;
   cursor: pointer;
+  color: #333;           /* whatever color you want the icon to be */
+  -webkit-tap-highlight-color: transparent;  /* optional: remove blue highlight on tap */
 }
 
 /* ───────────────────────────────────────────────

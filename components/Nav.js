@@ -6,26 +6,25 @@ import { useRouter } from 'next/router'
 import styles from './Nav.module.css'
 
 export default function Nav() {
-  const router = useRouter()
-  const isHome = router.pathname === '/'
+  const { pathname } = useRouter()
+  const isHome = pathname === '/'
+  // start hidden on home, visible elsewhere
   const [visible, setVisible] = useState(!isHome)
 
-  // hide/show navbar on scroll (only on home)
   useEffect(() => {
-    if (!isHome) return
+    if (!isHome) {
+      setVisible(true)
+      return
+    }
     setVisible(false)
     const onScroll = () => setVisible(window.scrollY > 50)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [isHome])
 
-  // mobile menu open/close
   const [open, setOpen] = useState(false)
-
-  // helper to close menu
   const handleClose = () => setOpen(false)
 
-  // list of nav items
   const items = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
@@ -55,7 +54,6 @@ export default function Nav() {
               {open ? <X size={24} /> : <Menu size={24} />}
             </button>
 
-            {/* desktop links */}
             <ul className={styles.links}>
               {items.slice(0, 4).map(({ href, label }) => (
                 <li key={href}>
@@ -71,13 +69,12 @@ export default function Nav() {
         </div>
       </nav>
 
-      {/* full-screen mobile menu overlay */}
       <div className={`${styles.mobileOverlay} ${open ? styles.open : ''}`}>
         <ul className={styles.mobileLinks}>
           {items.map(({ href, label }) => (
             <li key={href}>
               <Link href={href} onClick={handleClose}>
-                {label}
+                {label.toUpperCase()}
               </Link>
             </li>
           ))}
