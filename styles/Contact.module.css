@@ -122,3 +122,12 @@
     font-size: 1.75rem;
   }
 }
+/* force FAQ question text to your brand color, not the native blue */
+.faqItem summary {
+  color: #333;          /* or whatever gray/black you prefer */
+}
+
+/* optional: ensure the marker (▸) matches, too */
+.faqItem summary::marker {
+  color: #333;
+}

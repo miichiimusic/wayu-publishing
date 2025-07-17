@@ -42,7 +42,7 @@
 /* bottom container & text/button remain the same */
 .bottomContainer {
   position: absolute;
-  bottom: 100px;
+  bottom: 110px;
   left: 0;
   width: 100%;
   display: flex;
@@ -59,7 +59,7 @@
 }
 
 .learnMoreButton {
-  margin-top: 16px;
+  margin-top: 10px;
   padding: 1px 32px;
   background: transparent;
   color: white;
@@ -74,7 +74,7 @@
 /* scroll‐cue arrow */
 .scrollArrow {
   display: block;
-  margin: 0.5rem auto 0;
+  margin: 0rem auto 0;
   width: 60px;     /* ← make this whatever you like */
   height: 60px;    /* keep aspect ratio */
   stroke: #fff;
