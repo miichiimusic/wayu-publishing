@@ -42,7 +42,7 @@
 /* bottom container & text/button remain the same */
 .bottomContainer {
   position: absolute;
-  bottom: 50px;
+  bottom: 100px;
   left: 0;
   width: 100%;
   display: flex;
