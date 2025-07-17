@@ -3,7 +3,7 @@ title: "What is Sync Licensing?"
 date: "2025-05-01"
 description: "An in-depth look at sync licensing—how it works, who’s involved, and how artists and publishers get paid when music is used in visual media."
 author: "Leonardo Ortegon"
-tags: ["music publishing", "independent artists"]
+tags: ["Music Publishing", "Licensing"]
 image: "/images/articles/sync-licensing.jpg"
 ---
 

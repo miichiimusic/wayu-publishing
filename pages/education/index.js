@@ -49,31 +49,42 @@ export default function Education({ featured, articles, tags }) {
         />
       </Head>
 
-      {/* Hero Banner */}
-      <section className={styles.heroBanner}>
-        {/* left column */}
-        <div className={styles.heroLeft}>
-          <h1>Learn Music Publishing</h1>
-          <p>Dive into articles, tutorials, and resources to master your rights.</p>
-        </div>
+      {/* Page header: split title & subtitle */}
+      <section className={styles.headerSection}>
+        <h1 className={styles.headerTitle}>
+          Music Publishing Education
+        </h1>
+        <p className={styles.headerSubtitle}>
+          Dive into articles, tutorials, and resources to master your rights.
+        </p>
+        <hr className={styles.headerDivider} />
+      </section>
 
-        {/* right column: featured */}
-        <Link href={`/education/${featured.slug}`} className={styles.heroRight}>
+      {/* Featured Article */}
+      <section className={styles.featuredSection}>
+        <Link href={`/education/${featured.slug}`} className={styles.featuredCard}>
           <img
             src={featured.image}
             alt={featured.title}
             className={styles.featuredImage}
           />
-          <h2>{featured.title}</h2>
-          <p>{featured.description}</p>
-          <div className={styles.meta}>
-            <span className={styles.metaLabel}>Last Updated</span>
-            <Calendar size={16} className={styles.metaIcon} />
-            <span className={styles.metaDate}>
-              {new Date(featured.date).toLocaleDateString('en-US',{
-                 year:'numeric', month:'long', day:'numeric'
-              })}
-            </span>
+
+          <div className={styles.featuredContent}>
+            <h2 className={styles.featuredTitle}>{featured.title}</h2>
+            <p className={styles.featuredDescription}>
+              {featured.description}
+            </p>
+            <div className={styles.meta}>
+              <span className={styles.metaLabel}>Last Updated</span>
+              <Calendar size={16} className={styles.metaIcon} />
+              <span className={styles.metaDate}>
+                {new Date(featured.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </span>
+            </div>
           </div>
         </Link>
       </section>

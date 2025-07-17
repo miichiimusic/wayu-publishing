@@ -3,8 +3,8 @@ title: "How Do Streaming Royalties Work?"
 date: "2025-01-11"
 description: "Understand the two types of royalties your music earns on streaming platforms and how to make sure you're getting paid for both."
 author: "Leonardo Ortegon"
-tags: ["music publishing", "independent artists"]
-image: "/images/articles/streaming-royalties.png"
+tags: ["Music Publishing", "Royalties"]
+image: "/images/articles/streaming-royalties.jpg"
 ---
 
 When your music is streamed on platforms like Spotify, Apple Music, Amazon Music, or Deezer, it generates **two types of royalties**: one for the **sound recording** and one for the **composition**. These royalties are paid to different rights holders and flow through separate systems.

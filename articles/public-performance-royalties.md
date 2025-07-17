@@ -3,7 +3,7 @@ title: "What Are Public Performance Royalties?"
 date: "2025-01-31"
 description: "Learn how public performance royalties work, who collects them, and why they matter for songwriters and publishers."
 author: "Leonardo Ortegon"
-tags: ["music publishing", "independent artists"]
+tags: ["Music Publishing", "Royalties"]
 image: "/images/articles/public-performance-royalties.jpeg"
 ---
 

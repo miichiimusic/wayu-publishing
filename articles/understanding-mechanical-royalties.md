@@ -3,8 +3,8 @@ title: "Understanding Mechanical Royalties: A Complete Guide for Musicians"
 date: "2025-02-15"
 description: "Learn what mechanical royalties are, how they're generated, and why they're essential for songwriters and composers."
 author: "Sarah Chen"
-tags: ["music publishing", "independent artists"]
-image: "/images/articles/understanding-mechanical-royalties.png"
+tags: ["Music Publishing", "Royalties"]
+image: "/images/articles/understanding-mechanical-royalties.jpg"
 ---
 
 Mechanical royalties are one of the most important revenue streams for songwriters and composers, yet they remain widely misunderstood. In this comprehensive guide, we'll break down what mechanical royalties are, how they're generated, and why every musician should be tracking them.

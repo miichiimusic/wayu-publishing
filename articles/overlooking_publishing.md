@@ -3,8 +3,8 @@ title: "Independent Artists Are Overlooking Music Publishing. Here's Why That's 
 date: "2025-06-11"
 description: "A guide highlighting the importance of music publishing for independent artists, explaining why viewing themselves as composers first unlocks essential revenue streams and greater career success."
 author: "Leonardo Ortegon"
-tags: ["music publishing", "independent artists"]
-image: "/images/articles/overlooking-publishing.png"
+tags: ["Music Publishing", "Independent Artists"]
+image: "/images/articles/overlooking-publishing.jpg"
 ---
 
 Most independent musicians today focus intensely on creating great music, promoting tracks, and growing streams on platforms like Spotify and Apple Music. Yet, there's a critical element frequently left out of their strategy: **music publishing**. By neglecting this side of their music career, artists unintentionally leave valuable opportunities—and significant revenue—on the table.

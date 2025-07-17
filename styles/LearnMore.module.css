@@ -44,7 +44,7 @@
 .title {
   font-size: 3rem;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
   color: #111;
 }
 
@@ -58,14 +58,15 @@
 /* Right form column */
 .formColumn {
   background: #fff;
-  padding: 2rem;
   border-radius: 8px;
 }
 
 .formTitle {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
   margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #000000;
 }
 
 .form {
@@ -104,9 +105,28 @@
   background: #4b27cc;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px; 
+  height: 1px; 
+  padding: 0; 
+  margin: -1px; 
+  overflow: hidden; 
+  clip: rect(0,0,0,0); 
+  white-space: nowrap; 
+  border: 0;
+}
+
 /* Mobile: stack columns */
 @media (max-width: 768px) {
   .content {
     grid-template-columns: 1fr;
+    gap: 1rem;            /* ↓ override the 4rem gap with something tighter */
+  }
+
+  /* also tighten up the space under your last subtitle */
+  .textColumn .subtitle {
+    margin-bottom: 0.5rem; /* ↓ instead of whatever larger value you had */
   }
 }
+

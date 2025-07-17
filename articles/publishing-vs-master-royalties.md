@@ -3,8 +3,8 @@ title: "Publishing vs. Master Recording Royalties: What’s the Difference?"
 date: "2025-03-23"
 description: "An in-depth look at the two sides of music royalties—composition and recording—and how each earns money through streams, syncs, and more."
 author: "Leonardo Ortegon"
-tags: ["music publishing", "independent artists"]
-image: "/images/articles/publishing-vs-master-royalties.png"
+tags: ["Music Publishing", "Royalties"]
+image: "/images/articles/publishing-vs-master-royalties.jpg"
 ---
 
 Understanding how royalties work is essential for any artist, producer, or songwriter who wants to get paid for their music. But many creators overlook one of the most fundamental aspects of the music business: the fact that **every song is made up of two separate copyrights**, and each one generates its own kind of royalties.

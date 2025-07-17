@@ -3,7 +3,7 @@ title: "What is a PRO (Performing Rights Organization)?"
 date: "2025-03-11"
 description: "Learn what a PRO is, why it matters for songwriters and composers, and how it helps you collect royalties every time your music is played publicly."
 author: "Leonardo Ortegon"
-tags: ["music publishing", "independent artists"]
+tags: ["Music Publishing"]
 image: "/images/articles/what-is-a-pro.jpg"
 ---
 

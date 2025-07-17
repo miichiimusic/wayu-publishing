@@ -54,7 +54,7 @@ export default function Home() {
           <button className={styles.learnMoreButton}>
             LEARN MORE
           </button>
-          <ChevronDown size={24} className={styles.scrollArrow} />
+          <ChevronDown className={styles.scrollArrow} />
         </div>
      </div>
     </section>

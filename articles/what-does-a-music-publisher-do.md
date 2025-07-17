@@ -3,8 +3,8 @@ title: "Understanding Music Publishing: The Missing Piece in Most Artists’ Car
 date: "2025-01-15"
 description: "A clear breakdown of why music publishing matters — from royalty collection and rights protection to creating long-term income from your songs."
 author: "Leonardo Ortegon"
-tags: ["music publishing", "independent artists"]
-image: "/images/articles/what-does-a-music-publisher-do.png"
+tags: ["Music Publishing"]
+image: "/images/articles/what-does-a-music-publisher-do.jpg"
 ---
 
 In today’s music landscape, many independent artists, producers, and songwriters are releasing music, building a following, and receiving payments from streaming platforms like Spotify and Apple Music. But what most don’t realize is that they’re often only collecting half of the royalties their music is generating. This isn’t because of a lack of streams — it’s because a large portion of revenue is tied to something that’s widely misunderstood: music publishing.

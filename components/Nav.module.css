@@ -33,7 +33,7 @@
    Logo
 ─────────────────────────────────────────────── */
 .logo {
-  height: 15px;
+  height: 18px;
   cursor: pointer;
 }
 
@@ -67,12 +67,12 @@
    Call-to-action button
 ─────────────────────────────────────────────── */
 .cta {
-  background: #0800ff;
+  background: #323232;
   color: #fff;
   padding: 0.5rem 1rem;
-  border-radius: 100px;
+  border-radius: 0px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* ───────────────────────────────────────────────
@@ -150,9 +150,9 @@
   margin: 1.5rem 0;
 }
 .mobileLinks a {
-  font-size: 2rem;
-  font-weight: 400;
-  color: #111;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
   text-decoration: none;
   transition: color 0.2s ease;
   text-transform: uppercase;

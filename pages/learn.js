@@ -6,36 +6,17 @@ export default function Learn() {
   const [form, setForm] = useState({
     name: '',
     artist: '',
-    _replyto: '',
+    email: '',
     spotify: '',
   })
-  const [status, setStatus] = useState(null) // 'SUCCESS' | 'ERROR' | null
 
   const handleChange = e => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async e => {
+  const handleSubmit = e => {
     e.preventDefault()
-    const formElement = e.target
-    const formData = new FormData(formElement)
-
-    try {
-      const res = await fetch(formElement.action, {
-        method: formElement.method,
-        body: formData,
-        headers: { Accept: 'application/json' },
-      })
-
-      if (res.ok) {
-        setStatus('SUCCESS')
-        setForm({ name: '', artist: '', _replyto: '', spotify: '' })
-      } else {
-        setStatus('ERROR')
-      }
-    } catch (err) {
-      setStatus('ERROR')
-    }
+    console.log('Form submitted:', form)
   }
 
   return (
@@ -47,86 +28,68 @@ export default function Learn() {
             <span />
             Your Journey Starts Here
           </div>
-          <h1 className={styles.title}>SHAPE YOUR MUSIC FUTURE</h1>
+          <h1 className={styles.title}>
+            SHAPE YOUR MUSIC FUTURE
+          </h1>
           <p className={styles.subtitle}>
             We partner with artists ready to take control of their publishing,
             protect their rights, and grow with purpose.
-          </p>
-          <p className={styles.subtitle}>
-            Access our discovery form to learn how we can support your journey.
           </p>
         </div>
 
         {/* Right column: form */}
         <div className={styles.formColumn}>
-          <h2 className={styles.formTitle}>Tell Us About Yourself</h2>
+          <h2 className={styles.formTitle}>
+            Fill the form below to get started, and we will reach out to you within 24 hours.
+          </h2>
+          <form
+            onSubmit={handleSubmit}
+            action="https://formspree.io/f/mjkovjzn"
+            method="POST"
+            className={styles.form}
+          >
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={form.name}
+              onChange={handleChange}
+              required
+            />
 
-          {status === 'SUCCESS' ? (
-            <p className={styles.successMessage}>
-              Thanks for reaching out! We’ll be in touch shortly.
-            </p>
-          ) : (
-            <form
-              className={styles.form}
-              action="https://formspree.io/f/mjkovjzn"
-              method="POST"
-              onSubmit={handleSubmit}
-            >
-              <label>
-                Your Name
-                <input
-                  type="text"
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  required
-                />
-              </label>
+            <input
+              id="artist"
+              type="text"
+              name="artist"
+              placeholder="Artist Name"
+              value={form.artist}
+              onChange={handleChange}
+              required
+            />
 
-              <label>
-                Artist Name
-                <input
-                  type="text"
-                  name="artist"
-                  value={form.artist}
-                  onChange={handleChange}
-                  required
-                />
-              </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={form.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              id="spotify"
+              type="url"
+              name="spotify"
+              placeholder="Artist Spotify Link (Optional)"
+              value={form.spotify}
+              onChange={handleChange}
+            />
 
-              <label>
-                Email
-                <input
-                  type="email"
-                  name="_replyto"
-                  value={form._replyto}
-                  onChange={handleChange}
-                  required
-                />
-              </label>
-
-              <label>
-                Artist Spotify Link (Optional)
-                <input
-                  type="url"
-                  name="spotify"
-                  placeholder="https://open.spotify.com/artist/..."
-                  value={form.spotify}
-                  onChange={handleChange}
-                />
-              </label>
-
-              <button type="submit" className={styles.submitButton}>
-                Submit
-              </button>
-
-              {status === 'ERROR' && (
-                <p className={styles.errorMessage}>
-                  Oops! Something went wrong. Please try again.
-                </p>
-              )}
-            </form>
-          )}
+            <button type="submit" className={styles.submitButton}>
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </main>

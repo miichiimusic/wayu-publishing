@@ -1,137 +1,126 @@
 /* styles/EducationHome.module.css */
 
 /* -----------------------------------
-   Hero Banner (two columns on desktop)
+   Page Header (split title + subtitle)
 ----------------------------------- */
-.heroBanner {
-  display: flex;
-  align-items: center;      /* vertical centering */
-  justify-content: space-between;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto 4rem;
-  padding-top: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  color: #000000;
-}
-
-/* both columns share the space equally */
-.heroLeft,
-.heroRight {
-  flex: 1 1 50%;
-  min-width: 0;             /* so it can shrink on small screens */
-}
-
-/* Left column: center content vertically */
-.heroLeft {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* bump this to whatever feels right */
-.heroLeft h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-.heroLeft p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-/* -----------------------------------
-   Featured‐Card wrapper (right column)
------------------------------------ */
-.heroRight {
-  background: #fff;
-  border-radius: 8px;
-  color: #000;
-  transition: transform 0.2s;
-  text-decoration: none;     /* kill underline */
-}
-.heroRight:hover,
-.heroRight:focus {
-  transform: translateY(-4px);
-  text-decoration: none;
-}
-
-/* image teaser */
-.heroRight .featuredImage {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.heroRight h2 {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
-}
-
-.heroRight p {
-  font-size: 1rem;
-  color: #555;
-}
-
-.heroRight .meta {
+.headerSection {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  font-size: 0.875rem;
-  color: #666;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 1rem;    /* top = 0, sides = auto, bottom = 1rem */
+  padding-top: 6rem;
+  padding-inline: 1rem;      /* left & right padding */
 }
-.heroRight .metaLabel {
-  text-transform: uppercase;
-  font-size: 0.75rem;
+.headerTitle {
+  flex: 1 1 50%;
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+}
+.headerSubtitle {
+  flex: 1 1 50%;
+  font-size: 1rem;
   color: #444;
+  text-align: left;
+  margin: 0;
 }
-.heroRight .metaIcon {
-  color: #888;
+.headerDivider {
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  border: none;
+  margin: 1rem 0;
 }
-.heroRight .metaDate {
-  color: #333;
+
+/* stack header on tablet/mobile */
+@media (max-width: 768px) {
+  .headerSection {
+    display: block;
+    text-align: left;
+  }
+  .headerTitle {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  .headerSubtitle {
+    margin-top: 0.5rem;
+    text-align: left;
+  }
 }
 
 /* -----------------------------------
-   Main Layout Container
+   Featured Article
+----------------------------------- */
+.featuredSection {
+  max-width: 1200px;      /* bump this up from 800px */
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+}
+.featuredCard {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.featuredCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.featuredImage {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.featuredContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;    /* stack title → desc → meta */
+  justify-content:  center;  /* start at top */
+  padding: 1rem;
+}
+
+.featuredTitle {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+.featuredDescription {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+/* -----------------------------------
+   Mobile / narrow view – back to single-column
+----------------------------------- */
+@media (max-width: 768px) {
+  .featuredCard {
+    display: block;
+  }
+  .featuredImage {
+    width: 100%;
+    height: 200px;   /* your existing mobile height */
+  }
+  .featuredContent {
+    display: block;
+    padding: 1rem;
+  }
+}
+
+/* -----------------------------------
+   Main Container
 ----------------------------------- */
 .container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
-}
-
-/* -----------------------------------
-   Featured Article Card (below hero)
------------------------------------ */
-.featuredCard {
-  display: block;
-  background: #fff;
-  border-radius: 8px;
-  margin-bottom: 4rem;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s;
-}
-.featuredCard:hover {
-  transform: translateY(-4px);
-}
-.featuredCard h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.featuredCard p {
-  color: #555;
-  flex: 1 1 auto;
-}
-.featuredImage {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  margin-bottom: 1rem;
 }
 
 /* -----------------------------------
@@ -150,11 +139,13 @@
 .gridTitle {
   font-size: 3rem;
   font-weight: 600;
-  margin: 1rem 0;
+  margin: 0;
   color: #222;
 }
 
-/* small search & dropdown */
+/* -----------------------------------
+   Small Search + Dropdown
+----------------------------------- */
 .searchContainerSmall {
   position: relative;
   flex: 1 1 300px;
@@ -188,9 +179,9 @@
   overflow-y: auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   z-index: 10;
-  list-style: none;
   margin: 0.25rem 0 0;
   padding: 0;
+  list-style: none;
 }
 .dropdownItem {
   padding: 0.5rem 1rem;
@@ -202,9 +193,9 @@
 .dropdownLink {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
   text-decoration: none;
   color: #333;
+  padding: 0.5rem 1rem;
 }
 .dropdownImage {
   width: 40px;
@@ -219,7 +210,7 @@
 }
 
 /* -----------------------------------
-   Tag Pills (below search)
+   Tag Filters
 ----------------------------------- */
 .tagFiltersSmall {
   display: flex;
@@ -227,23 +218,21 @@
   gap: 0.5rem;
   margin-top: 1rem;
 }
-.tag {
-  background: #f0f0f0;
-  color: #333;
+.tag,
+.activeTag {
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   border: none;
   cursor: pointer;
   font-size: 0.875rem;
 }
+.tag {
+  background: #f0f0f0;
+  color: #333;
+}
 .activeTag {
   background: #2575fc;
   color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  border: none;
-  cursor: pointer;
-  font-size: 0.875rem;
 }
 
 /* -----------------------------------
@@ -253,79 +242,84 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
 }
 .card {
-  background: #fff;
-  border-radius: 8px;
+  /* remove any box or fill */
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+
+  /* ensure block layout so image & text stack */
+  display: block;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s, box-shadow 0.2s;
+
+  /* subtle hover to show interactivity */
+  transition: transform 0.15s ease;
 }
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
+/* image sits flush to the card’s top edge */
 .cardImage {
+  display: block;
   width: 100%;
-  height: 180px;
+  height: auto;      /* keep aspect */
   object-fit: cover;
-  margin-bottom: 0.75rem;
-}
-.card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-.card p {
-  font-size: 0.95rem;
-  color: #555;
   margin-bottom: 1rem;
 }
+
+/* title & summary have their own spacing */
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.card p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* =================================
+   Inline-flex Meta Bar
+   ================================= */
 .meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: #666;
-  margin-bottom: 2rem;
+  display: inline-flex;
   align-items: center;
-}
-.meta .tag {
-  background: #f0f0f0;
-  color: #333;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  text-transform: uppercase;
+  gap: 0.25rem;
   font-size: 0.75rem;
+  color: #666;
+  /* no extra margins—flows naturally under the text */
 }
 
-/* -----------------------------------
-   Responsive Breakpoints
------------------------------------ */
+.metaLabel {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #444;
+}
+
+.metaIcon {
+  color: #888;
+}
+
+.metaDate {
+  white-space: nowrap;
+  color: #333;
+}
+
+/* grid → 2 cols at 1024px, 1 col at 600px */
 @media (max-width: 1024px) {
-  /* stack hero into single column */
-  .heroBanner {
-    flex-direction: column;
-    text-align: left;      /* everything flush‐left */
-  }
-
-  .heroLeft,
-  .heroRight {
-    flex: 1 1 100%;
-    width: 100%;
-  }
-
-  /* scale down heading on tablets */
-  .heroLeft h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
