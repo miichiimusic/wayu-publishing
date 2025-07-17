@@ -1,42 +1,98 @@
+/* styles/EducationHome.module.css */
+
 /* -----------------------------------
-   Hero Banner
+   Hero Banner (two columns on desktop)
 ----------------------------------- */
 .heroBanner {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fff;
-  padding: 6rem 1rem;
-  text-align: center;
+  display: flex;
+  align-items: center;      /* vertical centering */
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #000000;
 }
-.bannerContent h1 {
-  font-size: 3rem;
+
+/* both columns share the space equally */
+.heroLeft,
+.heroRight {
+  flex: 1 1 50%;
+  min-width: 0;             /* so it can shrink on small screens */
+}
+
+/* Left column: center content vertically */
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* bump this to whatever feels right */
+.heroLeft h1 {
+  font-size: 4rem;
   margin-bottom: 1rem;
 }
-.bannerContent p {
+
+.heroLeft p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
 }
-.searchContainer {
-  position: relative;
-  max-width: 400px;
-  margin: 0 auto;
+
+/* -----------------------------------
+   Featured‐Card wrapper (right column)
+----------------------------------- */
+.heroRight {
+  background: #fff;
+  border-radius: 8px;
+  color: #000;
+  transition: transform 0.2s;
+  text-decoration: none;     /* kill underline */
 }
-.searchIcon {
-  position: absolute;
-  top: 50%;
-  left: 0.75rem;
-  transform: translateY(-50%);
+.heroRight:hover,
+.heroRight:focus {
+  transform: translateY(-4px);
+  text-decoration: none;
+}
+
+/* image teaser */
+.heroRight .featuredImage {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.heroRight h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.heroRight p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.heroRight .meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+.heroRight .metaLabel {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #444;
+}
+.heroRight .metaIcon {
   color: #888;
 }
-.searchInput {
-  width: 100%;
-  padding: 0.75rem 1rem 0.75rem 2.5rem;
-  border-radius: 9999px;
-  border: none;
-  font-size: 1rem;
-}
-.searchInput:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(255,255,255,0.5);
+.heroRight .metaDate {
+  color: #333;
 }
 
 /* -----------------------------------
@@ -49,7 +105,7 @@
 }
 
 /* -----------------------------------
-   Featured Article Card
+   Featured Article Card (below hero)
 ----------------------------------- */
 .featuredCard {
   display: block;
@@ -69,10 +125,11 @@
 }
 .featuredCard p {
   color: #555;
+  flex: 1 1 auto;
 }
 .featuredImage {
   width: 100%;
-  height: 300px;
+  height: 180px;
   object-fit: cover;
   margin-bottom: 1rem;
 }
@@ -142,13 +199,6 @@
 .dropdownItem + .dropdownItem {
   border-top: 1px solid #eee;
 }
-.dropdownItem a {
-  text-decoration: none;
-  color: #333;
-}
-.dropdownItem:hover {
-  background: #f5f5f5;
-}
 .dropdownLink {
   display: flex;
   align-items: center;
@@ -213,6 +263,7 @@
 }
 .card:hover {
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .cardImage {
   width: 100%;
@@ -229,8 +280,6 @@
   color: #555;
   margin-bottom: 1rem;
 }
-
-/* card meta label/date */
 .meta {
   display: flex;
   flex-wrap: wrap;
@@ -253,10 +302,30 @@
    Responsive Breakpoints
 ----------------------------------- */
 @media (max-width: 1024px) {
+  /* stack hero into single column */
+  .heroBanner {
+    flex-direction: column;
+    text-align: left;      /* everything flush‐left */
+  }
+
+  .heroLeft,
+  .heroRight {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  /* scale down heading on tablets */
+  .heroLeft h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
