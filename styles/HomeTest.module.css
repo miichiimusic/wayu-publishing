@@ -1,0 +1,104 @@
+/* styles/HomeTest.module.css */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #fafafa;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1rem;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #222;
+}
+
+.content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #0055ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.cardGridSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background-color: #000000;
+}
+
+.glassCard {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cardImage {
+  height: 50%;
+  min-height: 180px;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cardOverlay {
+  flex: 1;
+  padding: 1.25rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+/* Text adjustments */
+.cardOverlay h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.cardOverlay p {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .cardImage {
+    min-height: 140px;
+  }
+
+  .cardOverlay {
+    padding: 1rem;
+  }
+}
